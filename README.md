@@ -11,7 +11,7 @@
 
 ---
 
-## 🛠️ Step-by-Step Analysis
+## Step-by-Step Analysis
 
 ### Step 1: Raw Data Quality Control
 * **Tools:** `FastQC` & `MultiQC`
