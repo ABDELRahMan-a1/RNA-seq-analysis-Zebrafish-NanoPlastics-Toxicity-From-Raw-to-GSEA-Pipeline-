@@ -1,4 +1,4 @@
-# This project presents a comprehensive and rigorous RNA-seq analysis from Raw data to GSEA. It addresses the serious environmental pollution problem of polystyrene nanoparticle (PS-NP) contamination by analyzing its impact on the early developmental stages of zebrafish (larvae).
+**This project presents a comprehensive and rigorous RNA-seq analysis from Raw data to GSEA. It addresses the serious environmental pollution problem of polystyrene nanoparticle (PS-NP) contamination by analyzing its impact on the early developmental stages of zebrafish (larvae).
 
 **Pipeline Flow:** Raw sequencing reads → preprocessing → quantification → differential expression → functional enrichment (GSEA).
 
@@ -6,7 +6,8 @@
 
 ## 📊 Project Metadata
 * **Data Source:** NCBI Sequence Read Archive (SRA)
-* **BioProject ID:** `PRJNA1175381`
+* **BioProject ID:** `PRJNA1175381` `https://doi.org/10.1016/j.jhazmat.2024.136529`
+* **study link:** `https://doi.org/10.1016/j.jhazmat.2024.136529`
 * **Dataset:** 6 Samples (3 Control vs. 3 PS-NP Exposed)
 
 ---
