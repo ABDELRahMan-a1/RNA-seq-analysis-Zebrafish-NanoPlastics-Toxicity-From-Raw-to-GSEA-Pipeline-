@@ -33,4 +33,4 @@
 ### Step 5: Functional Genomics (GSEA)
 * **Tool:** `clusterProfiler`
 * Ranked genes by a custom metric for Gene Set Enrichment Analysis (GSEA) against GO Biological Processes.
-* Visualized gene-concept networks (Cnetplots) to identify central "hub" regulators.
+* Visualisation of the results plots to visualize the enrichment scores and distribution of gene set genes along the ranked gene list.
