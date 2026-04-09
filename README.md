@@ -2,37 +2,34 @@
 This project presents a comprehensive and rigorous RNA-seq analysis from Raw data to GSEA. It addresses the serious environmental pollution problem of polystyrene nanoparticle (PS-NP) contamination by analyzing its impact on the early developmental stages of zebrafish (larvae). 
 From raw sequencing reads → preprocessing → quantification → differential expression → functional enrichment (GSEA).
 
-1-Data AcquisitionSource:
+Data Acquisition Source:
 NCBI Sequence Read Archive (SRA).
 BioProject ID: PRJNA1175381
 Dataset: 6 Samples (3 Control vs. 3 PS-NP Exposed).
 
-📊 3. Post-QC Validation
-Re-ran FastQC
-Aggregated with MultiQC
+Step 1: Raw Data Quality Control
+Tools: FastQC & MultiQC.
 
-✅ Confirmed improved quality
-✅ Reduced technical bias
+Initial assessment of sequencing quality, identifying adapter contamination and overrepresented sequences.
 
-⚡ Phase II: Quantification (Pseudo-alignment)
-Tool: Kallisto to estimate transcript abundance (TPM)
-Reference: Danio rerio (GRCz11)
+Step 2: Read Trimming & Filtering
+Tool: Trimmomatic.
 
+Removed Illumina adapters and filtered low-quality bases (Phred score < 20).
 
-📈 Phase III: Differential Expression Analysis
-Tool: DESeq2
+Step 3: Transcript Quantification
+Tool: Kallisto.
 
-✔️ Normalization (size factors & dispersion)
-✔️ LFC Shrinkage using apeglm
-✔️ Statistical filtering:
+High-speed pseudo-alignment against the D. rerio (GRCz11) reference transcriptome to estimate transcript abundances.
 
-padj < 0.05
-|log2FC| > 0.5
+Step 4: Differential Gene Expression (DGE)
+Tool: DESeq2 (R/Bioconductor).
 
-🧠 Phase IV: Functional Analysis (GSEA)
-Tool: clusterProfiler
-📊 Outputs:
+-Performed LFC shrinkage using the apeglm method for reliable effect size estimation.
+-Thresholds: padj < 0.05 and |log2FC| > 0.5.
 
-GSEA plots
-Ridge plots
-Dotplots
+Step 5: Functional Genomics (GSEA)
+Tool: clusterProfiler.
+
+-Ranked genes by a custom metric for Gene Set Enrichment Analysis (GSEA) against GO Biological Processes.
+-Visualized gene-concept networks (Cnetplots) to identify central "hub" regulators.
